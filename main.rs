@@ -20,7 +20,7 @@ fn remove_line(arg: &str) -> Result<(), std::io::Error> {
     for line in reader.lines() {
         let line = line?;
 
-        // Check if the line starts with "your alias"
+        // Check if the line starts with specified alias
         if !line.starts_with(arg) {
             // Write the line to the temporary file
             writeln!(writer, "{}", line)?;
